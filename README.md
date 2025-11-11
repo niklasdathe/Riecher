@@ -1,13 +1,25 @@
 # Riecher
 ## motivation
 While Puster focuses on cleaning indoor air, Riecher focuses on understanding it.
-It was developed to better understand and improve indoor air quality. Key indicators such as temperature, humidity, particulate matter (PM2.5, PM10), VOCs, NOx, and CO₂ were identified as essential for both health and comfort.
+It was developed to better understand and improve indoor air quality. Key indicators such as temperature, humidity, particulate matter (PM2.5, PM10), VOCs, NOx, and CO₂ are essential for understanding both health and comfort.
 
-Poor air quality can trigger allergies, for example from dust mites, and directly impact well-being and productivity. In particular, CO₂ concentration is closely linked to our ability to concentrate, a critical factor in work and learning environments.  
+Poor air quality can trigger allergies or asthma and directly impact well-being and productivity. In particular, CO₂ concentration is closely linked to our ability to concentrate, a critical factor in work and learning environments.  
 
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/455d1424-b163-4f68-aa66-4ee6ab986ae0" />
+What I understand of good IAQ metrics after doing some research:
 
-By monitoring these values in real time, the system provides insights that help create healthier, safer, and more focused living and working spaces.
+| Parameter         | Very Good (Ideal)         | Good (No Changes Needed)    | Moderate (Changes Can Be Made) | Bad (Changes Needed)       | Very Bad (Leave – Health Risk)     |
+|------------------|----------------------------|------------------------------|----------------------------------|------------------------------|--------------------------------------|
+| **PM2.5 (µg/m³)** | ≤ 10 – clean air           | 11–20 – low risk             | 21–25 – minor effects possible  | 26–50 – unhealthy levels     | > 50 – hazardous (lung/cardiac impact) |
+| **PM10 (µg/m³)**  | ≤ 20 – background level    | 21–35 – acceptable           | 36–50 – WHO daily limit         | 51–100 – high exposure       | > 100 – severe pollution              |
+| **VOC Index**     | < 50 – odorless, clean     | 50–100 – typical indoor air  | 101–250 – noticeable VOCs       | 251–400 – irritants likely   | > 400 – unhealthy, strong emissions  |
+| **NOx Index**     | 1–25 – fresh air           | 26–50 – minimal NOx          | 51–100 – minor combustion sources | 101–300 – respiratory risk   | > 300 – toxic, strong pollution       |
+| **CO₂ (ppm)**     | ≤ 800 – excellent air      | 801–1000 – good              | 1001–2000 – drowsiness risk     | 2001–5000 – discomfort, headache | > 5000 – unsafe, leave immediately |
+| **Humidity (%RH)** | 40–50 – optimal range     | 30–60 – comfortable          | 20–30 / 60–70 – dry/humid edge  | 10–20 / 70–80 – health/mold risk | <10 / >80 – extreme, unsafe         |
+
+> Based on WHO, EPA, UBA, ASHRAE, and Sensirion guidelines.
+
+
+By monitoring these values in real time, Riecher provides insights that help create healthier, safer, and more focused living and working spaces.
 
 ## mechanicals
 <img width="181" height="199" alt="image" src=images/sketch.JPG /> <img width="181" height="199" alt="image" src=images/section_analysis.png />
@@ -48,4 +60,29 @@ the ESP32-C6 was chosen as the core of the Riecher PCB because it offers modern 
 I brought out the full GPIO Header known from the ESP32 Devkits which allows the Puster to be extended to your liking. 
  
 <img alt="image" src="images/pcb_routing.png"/>   
+
+## FAQ
+
+<details>
+  <summary>How do the NOx and VOCx scales work?</summary>
+  <p><img width="624" height="131" alt="image" src="https://github.com/user-attachments/assets/596de8c7-e2ab-4a70-a845-6e06fe673bd7" /></p>
+</details>
+
+
+<details>
+  <summary>What are the target values</summary>
+  <p>
+  | Parameter         | Very Good (Ideal)         | Good (No Changes Needed)    | Moderate (Changes Can Be Made) | Bad (Changes Needed)       | Very Bad (Leave – Health Risk)     |
+  |------------------|----------------------------|------------------------------|----------------------------------|------------------------------|--------------------------------------|
+  | **PM2.5 (µg/m³)** | ≤ 10 – clean air           | 11–20 – low risk             | 21–25 – minor effects possible  | 26–50 – unhealthy levels     | > 50 – hazardous (lung/cardiac impact) |
+  | **PM10 (µg/m³)**  | ≤ 20 – background level    | 21–35 – acceptable           | 36–50 – WHO daily limit         | 51–100 – high exposure       | > 100 – severe pollution              |
+  | **VOC Index**     | < 50 – odorless, clean     | 50–100 – typical indoor air  | 101–250 – noticeable VOCs       | 251–400 – irritants likely   | > 400 – unhealthy, strong emissions  |
+  | **NOx Index**     | 1–25 – fresh air           | 26–50 – minimal NOx          | 51–100 – minor combustion sources | 101–300 – respiratory risk   | > 300 – toxic, strong pollution       |
+  | **CO₂ (ppm)**     | ≤ 800 – excellent air      | 801–1000 – good              | 1001–2000 – drowsiness risk     | 2001–5000 – discomfort, headache | > 5000 – unsafe, leave immediately |
+  | **Temperature (°C)** | 20–22 – thermally ideal | 18–24 – comfortable          | 16–18 / 24–27 – cool/warm edge  | 14–16 / 27–30 – health impact | <14 / >30 – dangerous (hypo-/heat stress) |
+  | **Humidity (%RH)** | 40–50 – optimal range     | 30–60 – comfortable          | 20–30 / 60–70 – dry/humid edge  | 10–20 / 70–80 – health/mold risk | <10 / >80 – extreme, unsafe         |
+  
+  > Based on WHO, EPA, UBA, ASHRAE, and Sensirion guidelines.
+</p>
+</details>
 
