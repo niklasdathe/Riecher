@@ -69,20 +69,3 @@ I brought out the full GPIO Header known from the ESP32 Devkits which allows the
 </details>
 
 
-<details>
-  <summary>What are the target values</summary>
-  <p>
-  | Parameter         | Very Good (Ideal)         | Good (No Changes Needed)    | Moderate (Changes Can Be Made) | Bad (Changes Needed)       | Very Bad (Leave – Health Risk)     |
-  |------------------|----------------------------|------------------------------|----------------------------------|------------------------------|--------------------------------------|
-  | **PM2.5 (µg/m³)** | ≤ 10 – clean air           | 11–20 – low risk             | 21–25 – minor effects possible  | 26–50 – unhealthy levels     | > 50 – hazardous (lung/cardiac impact) |
-  | **PM10 (µg/m³)**  | ≤ 20 – background level    | 21–35 – acceptable           | 36–50 – WHO daily limit         | 51–100 – high exposure       | > 100 – severe pollution              |
-  | **VOC Index**     | < 50 – odorless, clean     | 50–100 – typical indoor air  | 101–250 – noticeable VOCs       | 251–400 – irritants likely   | > 400 – unhealthy, strong emissions  |
-  | **NOx Index**     | 1–25 – fresh air           | 26–50 – minimal NOx          | 51–100 – minor combustion sources | 101–300 – respiratory risk   | > 300 – toxic, strong pollution       |
-  | **CO₂ (ppm)**     | ≤ 800 – excellent air      | 801–1000 – good              | 1001–2000 – drowsiness risk     | 2001–5000 – discomfort, headache | > 5000 – unsafe, leave immediately |
-  | **Temperature (°C)** | 20–22 – thermally ideal | 18–24 – comfortable          | 16–18 / 24–27 – cool/warm edge  | 14–16 / 27–30 – health impact | <14 / >30 – dangerous (hypo-/heat stress) |
-  | **Humidity (%RH)** | 40–50 – optimal range     | 30–60 – comfortable          | 20–30 / 60–70 – dry/humid edge  | 10–20 / 70–80 – health/mold risk | <10 / >80 – extreme, unsafe         |
-  
-  > Based on WHO, EPA, UBA, ASHRAE, and Sensirion guidelines.
-</p>
-</details>
-
