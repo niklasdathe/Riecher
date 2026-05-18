@@ -22,7 +22,9 @@ What I understand of good IAQ metrics after doing some research:
 By monitoring these values in real time, Riecher provides insights that help create healthier, safer, and more focused living and working spaces.
 
 ## mechanicals
-<img width="181" height="199" alt="image" src=images/sketch.JPG /> <img width="181" height="199" alt="image" src=images/section_analysis.png />
+This whole idea started as a sketch:  
+<img width="181" height="199" alt="image" src=images/sketch.JPG /> 
+
 ### parts list
 - **1x base**  
   3D printed or machined. Holds the main assembly.  
@@ -43,12 +45,18 @@ By monitoring these values in real time, Riecher provides insights that help cre
   TODO (accurate bezeichnung)
 - _x screws
   TODO (heat set inserts)
+  
+Section analysis:  
+<img width="181" height="199" alt="image" src=images/section_analysis.png />
 
 ### manufacturing
 The ***base*** was routed from wood using a cnc machine. This was a dual sided operation as it has features on both sides of the base. On the bottom there is a place for the cable to be routed which acts as a strain relief at the same time.
+<img width="400" alt="Screenshot 2025-09-26 005000" src="https://github.com/user-attachments/assets/85a4e9a2-4c49-4540-9cc5-e903c8fdca42" />
 
-The ***cage*** was printed with Bambu Labs wood filament.'
 
+
+The ***cage*** was printed with Bambu Labs wood filament.' (https://eu.store.bambulab.com/de/products/pla-wood?id=53441583186268 )
+<img width="400" alt="20260518_094907883_iOS" src="https://github.com/user-attachments/assets/f6eec28f-ace5-4e04-ba16-347ed0741da5" />
 ## electronics
 ### the pcb 
 you can order the pcb through the following link:  
@@ -59,7 +67,9 @@ the ESP32-C6 was chosen as the core of the Riecher PCB because it offers modern 
 
 I brought out the full GPIO Header known from the ESP32 Devkits which allows the Puster to be extended to your liking. 
  
-<img alt="image" src="images/pcb_routing.png"/>   
+<img height="500" alt="image" src="images/pcb_routing.png"/> <img height="500" alt="20260518_094822624_iOS" src="https://github.com/user-attachments/assets/da3f2d4f-969f-41a8-9459-bd2e19d77e52" />  
+
+
 
 ## FAQ
 
